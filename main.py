@@ -18,7 +18,7 @@ def main():
             print("Hints not in the right format. Try again")
             continue
 
-        if hints == "GGGGGGGG":
+        if hints == "G" * LENGTH:
             print("Woohoo!")
             done = True
             continue
