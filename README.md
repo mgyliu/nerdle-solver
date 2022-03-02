@@ -19,3 +19,5 @@ Current guess: 6*6-2=34
 Result: GGGGGGGG
 Woohoo!
 ```
+
+![Using the script to solve nerdle](assets/solve-nerdle.gif)
