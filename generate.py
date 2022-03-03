@@ -11,6 +11,7 @@ def generateSyntaxValidExpressions(length):
     elif length == 2:
         return ["".join(x) for x in product(NUMBERS_POS, NUMBERS)]
     else:
+        final_list = []
         for i in range(1, length - 1):
             suffix_length = length - i - 1
 
@@ -37,11 +38,11 @@ def generateSyntaxValidExpressions(length):
 
             # filter out anything with leading zeroes
             # regex is None ==> no leading zeroes
-            final_list = filter(
+            final_list += filter(
                 lambda x: re.match(r"^(0+[0-9]+)", x) is None and "/0" not in x, l1 + l2
             )
 
-            return final_list
+        return final_list
 
 
 def createEvalDict(expressions):

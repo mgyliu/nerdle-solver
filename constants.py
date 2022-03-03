@@ -10,3 +10,4 @@ RELATIONS = ["="]
 
 LENGTH = 8
 EXPRS_FILENAME = "expressions.txt"
+DONE_STR = "done"

@@ -18,10 +18,14 @@ def getExprs():
 
 def validHints(hints):
     # it should be the right length
+    cond_length = len(hints) == LENGTH
+
     # it should contain the right letters
-    return (len(hints) == LENGTH) and (
+    cond_contents = (
         set(list(hints)) - set(["G", "P", "B"]) == set([])
-    )
+    ) or hints == DONE_STR
+
+    return cond_length and cond_contents
 
 
 def getNextGuess(curr_guess, hints, exprs):
